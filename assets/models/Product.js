@@ -28,9 +28,16 @@ Product.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 10,
+      validate: {
+        isNumeric: true
+      }
     },
     catgeory_id: {
       type: DataTypes.INTEGER,
+      refrences: {
+        model: 'category',
+        key: 'id'
+      }
     }
   },
   {
