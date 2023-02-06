@@ -1,10 +1,11 @@
 const router = require('express').Router();
+const { reset } = require('nodemon');
 const { Product, Category } = require('../../models');
 
 // The `/api/products` endpoint
 
 // get all products
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
   // find all products
   // be sure to include its associated Category and Tag data
   try {
@@ -12,6 +13,8 @@ router.get('/', (req, res) => {
       include: [{ mode: Category}, {model: Tag, attributes: ['tag_name'], through, ProductTag, as: 'productTag_products'}]
     });
     res.status(200).json(productData);
+  } catch (err) {
+    res.status(500).json(err)
   }
 });
 
@@ -19,6 +22,11 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   // find a single product by its `id`
   // be sure to include its associated Category and Tag data
+  try {
+    const productData = await Product.findByPk(req.params.id, {
+      include
+    })
+  }
 });
 
 // create new product
