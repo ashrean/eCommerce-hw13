@@ -23,6 +23,7 @@ Product.init(
     price: {
       type: DataTypes.DECIMAL,
       allowNull: false,
+      isDecimal: true,
     },
     stock: {
       type: DataTypes.INTEGER,
@@ -35,7 +36,7 @@ Product.init(
     catgeory_id: {
       type: DataTypes.INTEGER,
       refrences: {
-        model: 'category',
+        model: 'Category',
         key: 'id'
       }
     }

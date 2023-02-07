@@ -25,7 +25,7 @@ There is a few steps to do.
 
 # Github Account
 - [GitHub](https://github.com/ashrean)
-- [Video Link]()
+- [Video Link](./images/Untitled_%20Feb%207%202023%2012_00%20AM.webm)
 
 # Images
 ![alt text](./images/Screenshot%202023-02-06%20at%209.39.20%20PM.png)
