@@ -19,7 +19,7 @@
 
 # Github Account
 - [GitHub](https://github.com/ashrean)
-- [Deployed Link]()
+- [Video Link]()
 
 # Images
 ![alt text]()

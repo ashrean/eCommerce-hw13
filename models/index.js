@@ -38,13 +38,13 @@ Category.hasMany(Product, {
   foreignKey: 'category_id',
 });
 
-Product.belongsTopMany(Tag, {
+Product.belongsToMany(Tag, {
   through: ProductTag,
   foreignKey: 'product_id',
 });
 
 Tag.belongsToMany(Product, {
-  thorugh: ProductTag,
+  through: ProductTag,
   foreignKey: 'tag_id'
 })
 
